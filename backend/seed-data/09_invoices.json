@@ -1,0 +1,188 @@
+[
+    {
+        "_id": {
+            "$oid": "66621b2c3d4e5f6a7b8c9d01"
+        },
+        "invoiceCode": "INV-2025-0001",
+        "studentId": {
+            "$oid": "665b1b2c3d4e5f6a7b8c9d01"
+        },
+        "roomId": {
+            "$oid": "665d1b2c3d4e5f6a7b8c9d01"
+        },
+        "type": "room_fee",
+        "termCode": "2025-HK1",
+        "description": "Tien phong A101 - HK1/2025",
+        "amount": 3600000,
+        "paidAmount": 3600000,
+        "dueDate": {
+            "$date": "2025-02-28T23:59:59.000Z"
+        },
+        "status": "paid",
+        "relatedRequestId": null,
+        "createdBy": {
+            "$oid": "665a1b2c3d4e5f6a7b8c9d01"
+        },
+        "createdAt": {
+            "$date": "2025-02-01T00:00:00.000Z"
+        },
+        "updatedAt": {
+            "$date": "2025-02-10T14:30:00.000Z"
+        }
+    },
+    {
+        "_id": {
+            "$oid": "66621b2c3d4e5f6a7b8c9d02"
+        },
+        "invoiceCode": "INV-2025-0002",
+        "studentId": {
+            "$oid": "665b1b2c3d4e5f6a7b8c9d02"
+        },
+        "roomId": {
+            "$oid": "665d1b2c3d4e5f6a7b8c9d01"
+        },
+        "type": "room_fee",
+        "termCode": "2025-HK1",
+        "description": "Tien phong A101 - HK1/2025",
+        "amount": 3600000,
+        "paidAmount": 0,
+        "dueDate": {
+            "$date": "2025-02-28T23:59:59.000Z"
+        },
+        "status": "overdue",
+        "relatedRequestId": null,
+        "createdBy": {
+            "$oid": "665a1b2c3d4e5f6a7b8c9d01"
+        },
+        "createdAt": {
+            "$date": "2025-02-01T00:00:00.000Z"
+        },
+        "updatedAt": {
+            "$date": "2025-03-01T00:00:00.000Z"
+        }
+    },
+    {
+        "_id": {
+            "$oid": "66621b2c3d4e5f6a7b8c9d03"
+        },
+        "invoiceCode": "INV-2025-0003",
+        "studentId": {
+            "$oid": "665b1b2c3d4e5f6a7b8c9d03"
+        },
+        "roomId": {
+            "$oid": "665d1b2c3d4e5f6a7b8c9d02"
+        },
+        "type": "room_fee",
+        "termCode": "2025-HK1",
+        "description": "Tien phong A102 - HK1/2025",
+        "amount": 3600000,
+        "paidAmount": 1800000,
+        "dueDate": {
+            "$date": "2025-02-28T23:59:59.000Z"
+        },
+        "status": "partial",
+        "relatedRequestId": null,
+        "createdBy": {
+            "$oid": "665a1b2c3d4e5f6a7b8c9d01"
+        },
+        "createdAt": {
+            "$date": "2025-02-01T00:00:00.000Z"
+        },
+        "updatedAt": {
+            "$date": "2025-02-15T10:00:00.000Z"
+        }
+    },
+    {
+        "_id": {
+            "$oid": "66621b2c3d4e5f6a7b8c9d04"
+        },
+        "invoiceCode": "INV-2025-0004",
+        "studentId": {
+            "$oid": "665b1b2c3d4e5f6a7b8c9d04"
+        },
+        "roomId": {
+            "$oid": "665d1b2c3d4e5f6a7b8c9d04"
+        },
+        "type": "room_fee",
+        "termCode": "2025-HK1",
+        "description": "Tien phong B101 - HK1/2025",
+        "amount": 3600000,
+        "paidAmount": 3600000,
+        "dueDate": {
+            "$date": "2025-02-28T23:59:59.000Z"
+        },
+        "status": "paid",
+        "relatedRequestId": null,
+        "createdBy": {
+            "$oid": "665a1b2c3d4e5f6a7b8c9d01"
+        },
+        "createdAt": {
+            "$date": "2025-02-01T00:00:00.000Z"
+        },
+        "updatedAt": {
+            "$date": "2025-02-05T11:00:00.000Z"
+        }
+    },
+    {
+        "_id": {
+            "$oid": "66621b2c3d4e5f6a7b8c9d05"
+        },
+        "invoiceCode": "INV-2025-0005",
+        "studentId": {
+            "$oid": "665b1b2c3d4e5f6a7b8c9d03"
+        },
+        "roomId": {
+            "$oid": "665d1b2c3d4e5f6a7b8c9d02"
+        },
+        "type": "violation_fine",
+        "termCode": null,
+        "description": "Phat vi pham gio gioi nghiem ngay 10/02/2025",
+        "amount": 200000,
+        "paidAmount": 0,
+        "dueDate": {
+            "$date": "2025-03-10T23:59:59.000Z"
+        },
+        "status": "unpaid",
+        "relatedRequestId": null,
+        "createdBy": {
+            "$oid": "665a1b2c3d4e5f6a7b8c9d02"
+        },
+        "createdAt": {
+            "$date": "2025-02-11T08:00:00.000Z"
+        },
+        "updatedAt": {
+            "$date": "2025-02-11T08:00:00.000Z"
+        }
+    },
+    {
+        "_id": {
+            "$oid": "66621b2c3d4e5f6a7b8c9d06"
+        },
+        "invoiceCode": "INV-2025-0006",
+        "studentId": {
+            "$oid": "665b1b2c3d4e5f6a7b8c9d01"
+        },
+        "roomId": {
+            "$oid": "665d1b2c3d4e5f6a7b8c9d01"
+        },
+        "type": "damage_compensation",
+        "termCode": null,
+        "description": "Boi thuong ghe bi gay chan trong phong A101",
+        "amount": 400000,
+        "paidAmount": 0,
+        "dueDate": {
+            "$date": "2025-03-15T23:59:59.000Z"
+        },
+        "status": "unpaid",
+        "relatedRequestId": null,
+        "createdBy": {
+            "$oid": "665a1b2c3d4e5f6a7b8c9d01"
+        },
+        "createdAt": {
+            "$date": "2025-02-20T09:00:00.000Z"
+        },
+        "updatedAt": {
+            "$date": "2025-02-20T09:00:00.000Z"
+        }
+    }
+]

@@ -1,0 +1,96 @@
+[
+    {
+        "_id": {
+            "$oid": "66651b2c3d4e5f6a7b8c9d01"
+        },
+        "key": "electricity_excess_price",
+        "value": 3500,
+        "description": "Gia dien vuot muc cho phep (VND/kWh)",
+        "updatedBy": {
+            "$oid": "665a1b2c3d4e5f6a7b8c9d01"
+        },
+        "createdAt": {
+            "$date": "2025-01-01T00:00:00.000Z"
+        },
+        "updatedAt": {
+            "$date": "2025-01-01T00:00:00.000Z"
+        }
+    },
+    {
+        "_id": {
+            "$oid": "66651b2c3d4e5f6a7b8c9d02"
+        },
+        "key": "electricity_free_limit",
+        "value": 50,
+        "description": "So kWh dien mien phi moi phong moi thang",
+        "updatedBy": {
+            "$oid": "665a1b2c3d4e5f6a7b8c9d01"
+        },
+        "createdAt": {
+            "$date": "2025-01-01T00:00:00.000Z"
+        },
+        "updatedAt": {
+            "$date": "2025-01-01T00:00:00.000Z"
+        }
+    },
+    {
+        "_id": {
+            "$oid": "66651b2c3d4e5f6a7b8c9d03"
+        },
+        "key": "damage_compensation_rates",
+        "value": {
+            "fan": 500000,
+            "bed": 1000000,
+            "desk": 800000,
+            "chair": 400000,
+            "door": 1500000,
+            "window": 1200000,
+            "air_conditioner": 5000000,
+            "water_heater": 3000000
+        },
+        "description": "Bang gia boi thuong thiet hai (VND)",
+        "updatedBy": {
+            "$oid": "665a1b2c3d4e5f6a7b8c9d01"
+        },
+        "createdAt": {
+            "$date": "2025-01-01T00:00:00.000Z"
+        },
+        "updatedAt": {
+            "$date": "2025-01-01T00:00:00.000Z"
+        }
+    },
+    {
+        "_id": {
+            "$oid": "66651b2c3d4e5f6a7b8c9d04"
+        },
+        "key": "term_duration_months",
+        "value": 4,
+        "description": "So thang moi ky thanh toan tien phong",
+        "updatedBy": {
+            "$oid": "665a1b2c3d4e5f6a7b8c9d01"
+        },
+        "createdAt": {
+            "$date": "2025-01-01T00:00:00.000Z"
+        },
+        "updatedAt": {
+            "$date": "2025-01-01T00:00:00.000Z"
+        }
+    },
+    {
+        "_id": {
+            "$oid": "66651b2c3d4e5f6a7b8c9d05"
+        },
+        "key": "late_payment_penalty_rate",
+        "value": 0.05,
+        "description": "Ty le phat khi thanh toan tre han (5%)",
+        "updatedBy": {
+            "$oid": "665a1b2c3d4e5f6a7b8c9d01"
+        },
+        "createdAt": {
+            "$date": "2025-01-01T00:00:00.000Z"
+        },
+        "updatedAt": {
+            "$date": "2025-01-01T00:00:00.000Z"
+        }
+    }
+]

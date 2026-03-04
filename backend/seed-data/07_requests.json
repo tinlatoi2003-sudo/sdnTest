@@ -1,0 +1,88 @@
+[
+    {
+        "_id": {
+            "$oid": "66601b2c3d4e5f6a7b8c9d01"
+        },
+        "studentId": {
+            "$oid": "665b1b2c3d4e5f6a7b8c9d01"
+        },
+        "type": "damage_report",
+        "title": "Quat tran phong A101 bi hong",
+        "description": "Quat tran so 2 trong phong A101 khong quay duoc.",
+        "attachments": [],
+        "currentRoomId": {
+            "$oid": "665d1b2c3d4e5f6a7b8c9d01"
+        },
+        "targetRoomId": null,
+        "status": "manager_approved",
+        "managerReview": {
+            "reviewedBy": {
+                "$oid": "665a1b2c3d4e5f6a7b8c9d02"
+            },
+            "status": "approved",
+            "note": "Da kiem tra, quat hong motor.",
+            "reviewedAt": {
+                "$date": "2025-02-16T10:00:00.000Z"
+            }
+        },
+        "adminReview": null,
+        "createdAt": {
+            "$date": "2025-02-15T08:00:00.000Z"
+        },
+        "updatedAt": {
+            "$date": "2025-02-16T10:00:00.000Z"
+        }
+    },
+    {
+        "_id": {
+            "$oid": "66601b2c3d4e5f6a7b8c9d02"
+        },
+        "studentId": {
+            "$oid": "665b1b2c3d4e5f6a7b8c9d03"
+        },
+        "type": "room_transfer",
+        "title": "Xin chuyen tu phong A102 sang A201",
+        "description": "Em muon chuyen sang phong VIP A201.",
+        "attachments": [],
+        "currentRoomId": {
+            "$oid": "665d1b2c3d4e5f6a7b8c9d02"
+        },
+        "targetRoomId": {
+            "$oid": "665d1b2c3d4e5f6a7b8c9d03"
+        },
+        "status": "pending",
+        "managerReview": null,
+        "adminReview": null,
+        "createdAt": {
+            "$date": "2025-02-18T14:00:00.000Z"
+        },
+        "updatedAt": {
+            "$date": "2025-02-18T14:00:00.000Z"
+        }
+    },
+    {
+        "_id": {
+            "$oid": "66601b2c3d4e5f6a7b8c9d03"
+        },
+        "studentId": {
+            "$oid": "665b1b2c3d4e5f6a7b8c9d02"
+        },
+        "type": "room_retention",
+        "title": "Xin giu phong A101 ky tiep theo",
+        "description": "Em muon tiep tuc o phong A101 cho HK2 nam 2025.",
+        "attachments": [],
+        "currentRoomId": {
+            "$oid": "665d1b2c3d4e5f6a7b8c9d01"
+        },
+        "targetRoomId": null,
+        "status": "pending",
+        "managerReview": null,
+        "adminReview": null,
+        "createdAt": {
+            "$date": "2025-02-25T09:00:00.000Z"
+        },
+        "updatedAt": {
+            "$date": "2025-02-25T09:00:00.000Z"
+        }
+    }
+]

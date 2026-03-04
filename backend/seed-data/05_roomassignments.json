@@ -1,0 +1,134 @@
+[
+    {
+        "_id": {
+            "$oid": "665e1b2c3d4e5f6a7b8c9d01"
+        },
+        "studentId": {
+            "$oid": "665b1b2c3d4e5f6a7b8c9d01"
+        },
+        "roomId": {
+            "$oid": "665d1b2c3d4e5f6a7b8c9d01"
+        },
+        "buildingId": {
+            "$oid": "665c1b2c3d4e5f6a7b8c9d01"
+        },
+        "termCode": "2025-HK1",
+        "startDate": {
+            "$date": "2025-02-01T00:00:00.000Z"
+        },
+        "endDate": null,
+        "status": "active",
+        "createdAt": {
+            "$date": "2025-02-01T08:00:00.000Z"
+        },
+        "updatedAt": {
+            "$date": "2025-02-01T08:00:00.000Z"
+        }
+    },
+    {
+        "_id": {
+            "$oid": "665e1b2c3d4e5f6a7b8c9d02"
+        },
+        "studentId": {
+            "$oid": "665b1b2c3d4e5f6a7b8c9d02"
+        },
+        "roomId": {
+            "$oid": "665d1b2c3d4e5f6a7b8c9d01"
+        },
+        "buildingId": {
+            "$oid": "665c1b2c3d4e5f6a7b8c9d01"
+        },
+        "termCode": "2025-HK1",
+        "startDate": {
+            "$date": "2025-02-01T00:00:00.000Z"
+        },
+        "endDate": null,
+        "status": "active",
+        "createdAt": {
+            "$date": "2025-02-01T08:00:00.000Z"
+        },
+        "updatedAt": {
+            "$date": "2025-02-01T08:00:00.000Z"
+        }
+    },
+    {
+        "_id": {
+            "$oid": "665e1b2c3d4e5f6a7b8c9d03"
+        },
+        "studentId": {
+            "$oid": "665b1b2c3d4e5f6a7b8c9d03"
+        },
+        "roomId": {
+            "$oid": "665d1b2c3d4e5f6a7b8c9d02"
+        },
+        "buildingId": {
+            "$oid": "665c1b2c3d4e5f6a7b8c9d01"
+        },
+        "termCode": "2025-HK1",
+        "startDate": {
+            "$date": "2025-02-01T00:00:00.000Z"
+        },
+        "endDate": null,
+        "status": "active",
+        "createdAt": {
+            "$date": "2025-02-01T08:00:00.000Z"
+        },
+        "updatedAt": {
+            "$date": "2025-02-01T08:00:00.000Z"
+        }
+    },
+    {
+        "_id": {
+            "$oid": "665e1b2c3d4e5f6a7b8c9d04"
+        },
+        "studentId": {
+            "$oid": "665b1b2c3d4e5f6a7b8c9d04"
+        },
+        "roomId": {
+            "$oid": "665d1b2c3d4e5f6a7b8c9d04"
+        },
+        "buildingId": {
+            "$oid": "665c1b2c3d4e5f6a7b8c9d02"
+        },
+        "termCode": "2025-HK1",
+        "startDate": {
+            "$date": "2025-02-01T00:00:00.000Z"
+        },
+        "endDate": null,
+        "status": "active",
+        "createdAt": {
+            "$date": "2025-02-01T08:00:00.000Z"
+        },
+        "updatedAt": {
+            "$date": "2025-02-01T08:00:00.000Z"
+        }
+    },
+    {
+        "_id": {
+            "$oid": "665e1b2c3d4e5f6a7b8c9d05"
+        },
+        "studentId": {
+            "$oid": "665b1b2c3d4e5f6a7b8c9d01"
+        },
+        "roomId": {
+            "$oid": "665d1b2c3d4e5f6a7b8c9d03"
+        },
+        "buildingId": {
+            "$oid": "665c1b2c3d4e5f6a7b8c9d01"
+        },
+        "termCode": "2024-HK2",
+        "startDate": {
+            "$date": "2024-09-01T00:00:00.000Z"
+        },
+        "endDate": {
+            "$date": "2025-01-31T00:00:00.000Z"
+        },
+        "status": "ended",
+        "createdAt": {
+            "$date": "2024-09-01T08:00:00.000Z"
+        },
+        "updatedAt": {
+            "$date": "2025-01-31T08:00:00.000Z"
+        }
+    }
+]

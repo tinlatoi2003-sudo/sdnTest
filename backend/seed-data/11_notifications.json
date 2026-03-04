@@ -1,0 +1,91 @@
+[
+    {
+        "_id": {
+            "$oid": "66641b2c3d4e5f6a7b8c9d01"
+        },
+        "senderId": {
+            "$oid": "665a1b2c3d4e5f6a7b8c9d01"
+        },
+        "receiverIds": [
+            {
+                "$oid": "665a1b2c3d4e5f6a7b8c9d04"
+            },
+            {
+                "$oid": "665a1b2c3d4e5f6a7b8c9d05"
+            },
+            {
+                "$oid": "665a1b2c3d4e5f6a7b8c9d06"
+            },
+            {
+                "$oid": "665a1b2c3d4e5f6a7b8c9d07"
+            },
+            {
+                "$oid": "665a1b2c3d4e5f6a7b8c9d08"
+            }
+        ],
+        "receiverType": "role",
+        "targetRole": "student",
+        "targetBuildingId": null,
+        "title": "Thong bao dong tien phong HK1/2025",
+        "message": "Han dong tien phong HK1/2025 la ngay 28/02/2025.",
+        "type": "payment_reminder",
+        "readBy": [
+            {
+                "userId": {
+                    "$oid": "665a1b2c3d4e5f6a7b8c9d04"
+                },
+                "readAt": {
+                    "$date": "2025-02-02T08:30:00.000Z"
+                }
+            },
+            {
+                "userId": {
+                    "$oid": "665a1b2c3d4e5f6a7b8c9d07"
+                },
+                "readAt": {
+                    "$date": "2025-02-02T09:15:00.000Z"
+                }
+            }
+        ],
+        "createdAt": {
+            "$date": "2025-02-01T07:00:00.000Z"
+        },
+        "updatedAt": {
+            "$date": "2025-02-01T07:00:00.000Z"
+        }
+    },
+    {
+        "_id": {
+            "$oid": "66641b2c3d4e5f6a7b8c9d02"
+        },
+        "senderId": {
+            "$oid": "665a1b2c3d4e5f6a7b8c9d02"
+        },
+        "receiverIds": [
+            {
+                "$oid": "665a1b2c3d4e5f6a7b8c9d04"
+            },
+            {
+                "$oid": "665a1b2c3d4e5f6a7b8c9d05"
+            },
+            {
+                "$oid": "665a1b2c3d4e5f6a7b8c9d06"
+            }
+        ],
+        "receiverType": "building",
+        "targetRole": null,
+        "targetBuildingId": {
+            "$oid": "665c1b2c3d4e5f6a7b8c9d01"
+        },
+        "title": "Lich ve sinh tong Toa A",
+        "message": "Toa A se tien hanh tong ve sinh vao CN 02/03/2025.",
+        "type": "general",
+        "readBy": [],
+        "createdAt": {
+            "$date": "2025-02-27T16:00:00.000Z"
+        },
+        "updatedAt": {
+            "$date": "2025-02-27T16:00:00.000Z"
+        }
+    }
+]
