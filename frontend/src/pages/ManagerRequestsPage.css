@@ -1,0 +1,327 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+
+.mr-page {
+    min-height: 100vh;
+    background: #f8f9fb;
+    font-family: "Inter", sans-serif;
+    padding: 32px;
+}
+
+.mr-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.mr-title {
+    font-size: 22px;
+    font-weight: 800;
+    color: #1a1a1a;
+    margin-bottom: 4px;
+}
+
+.mr-subtitle {
+    font-size: 14px;
+    color: #888;
+}
+
+/* Filters */
+.mr-filters {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.mr-select {
+    padding: 9px 14px;
+    border: 1.5px solid #e8e8e8;
+    border-radius: 10px;
+    font-size: 13px;
+    font-family: "Inter", sans-serif;
+    color: #1a1a1a;
+    background: #fff;
+    outline: none;
+    cursor: pointer;
+    transition: border-color .2s;
+}
+
+.mr-select:focus {
+    border-color: #e8540a;
+}
+
+/* Stats */
+.mr-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.mr-stat {
+    background: #fff;
+    border: 1px solid #efefef;
+    border-radius: 14px;
+    padding: 16px 18px;
+    text-align: center;
+}
+
+.mr-stat-num {
+    font-size: 28px;
+    font-weight: 800;
+}
+
+.mr-stat-label {
+    font-size: 12px;
+    color: #888;
+    margin-top: 3px;
+}
+
+/* Table */
+.mr-table-wrap {
+    background: #fff;
+    border: 1px solid #efefef;
+    border-radius: 16px;
+    overflow: auto;
+}
+
+.mr-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+.mr-table th {
+    background: #fafafa;
+    padding: 12px 16px;
+    text-align: left;
+    font-size: 12px;
+    font-weight: 600;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: .4px;
+}
+
+.mr-table td {
+    padding: 14px 16px;
+    border-top: 1px solid #f5f5f5;
+    color: #1a1a1a;
+}
+
+.mr-table tbody tr:hover {
+    background: #fef9f7;
+}
+
+/* Badge */
+.mr-badge {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.mr-badge.pending {
+    background: rgba(245, 158, 11, .1);
+    color: #d97706;
+    border: 1px solid rgba(245, 158, 11, .25);
+}
+
+.mr-badge.manager_approved {
+    background: rgba(34, 197, 94, .1);
+    color: #16a34a;
+    border: 1px solid rgba(34, 197, 94, .25);
+}
+
+.mr-badge.manager_rejected {
+    background: rgba(239, 68, 68, .1);
+    color: #dc2626;
+    border: 1px solid rgba(239, 68, 68, .25);
+}
+
+.mr-badge.completed {
+    background: rgba(34, 197, 94, .1);
+    color: #16a34a;
+    border: 1px solid rgba(34, 197, 94, .25);
+}
+
+.mr-badge.info {
+    background: rgba(59, 130, 246, .1);
+    color: #2563eb;
+    border: 1px solid rgba(59, 130, 246, .25);
+}
+
+/* Action buttons */
+.mr-btn-approve {
+    padding: 7px 14px;
+    background: rgba(34, 197, 94, .1);
+    color: #16a34a;
+    border: 1.5px solid rgba(34, 197, 94, .3);
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: "Inter", sans-serif;
+    transition: all .2s;
+}
+
+.mr-btn-approve:hover {
+    background: rgba(34, 197, 94, .2);
+}
+
+.mr-btn-reject {
+    padding: 7px 14px;
+    background: rgba(239, 68, 68, .08);
+    color: #dc2626;
+    border: 1.5px solid rgba(239, 68, 68, .25);
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: "Inter", sans-serif;
+    transition: all .2s;
+}
+
+.mr-btn-reject:hover {
+    background: rgba(239, 68, 68, .16);
+}
+
+/* Modal */
+.mr-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, .45);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(2px);
+}
+
+.mr-modal {
+    background: #fff;
+    border-radius: 18px;
+    width: min(480px, 95vw);
+    padding: 28px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, .18);
+}
+
+.mr-modal-title {
+    font-size: 17px;
+    font-weight: 800;
+    color: #1a1a1a;
+    margin-bottom: 4px;
+}
+
+.mr-modal-sub {
+    font-size: 13px;
+    color: #888;
+    margin-bottom: 18px;
+}
+
+.mr-input,
+.mr-textarea {
+    width: 100%;
+    box-sizing: border-box;
+    border: 1.5px solid #e8e8e8;
+    border-radius: 10px;
+    padding: 11px 14px;
+    font-size: 14px;
+    font-family: "Inter", sans-serif;
+    outline: none;
+    transition: border-color .2s;
+    margin-bottom: 12px;
+    display: block;
+}
+
+.mr-input:focus,
+.mr-textarea:focus {
+    border-color: #e8540a;
+}
+
+.mr-textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.mr-modal-actions {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    margin-top: 8px;
+}
+
+.mr-btn-cancel {
+    padding: 10px 18px;
+    background: #f5f5f5;
+    color: #555;
+    border: 1.5px solid #e8e8e8;
+    border-radius: 10px;
+    font-size: 14px;
+    font-family: "Inter", sans-serif;
+    cursor: pointer;
+}
+
+.mr-btn-confirm {
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #e8540a, #ff7c3a);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: "Inter", sans-serif;
+    cursor: pointer;
+    box-shadow: 0 4px 14px rgba(232, 84, 10, .35);
+}
+
+.mr-btn-confirm:disabled {
+    opacity: .55;
+    cursor: not-allowed;
+}
+
+.mr-alert {
+    padding: 11px 14px;
+    border-radius: 10px;
+    font-size: 13px;
+    margin-bottom: 16px;
+}
+
+.mr-alert.success {
+    background: rgba(34, 197, 94, .08);
+    border: 1px solid rgba(34, 197, 94, .2);
+    color: #16a34a;
+}
+
+.mr-alert.error {
+    background: rgba(239, 68, 68, .08);
+    border: 1px solid rgba(239, 68, 68, .2);
+    color: #dc2626;
+}
+
+.mr-empty,
+.mr-loading {
+    text-align: center;
+    padding: 60px 20px;
+    color: #bbb;
+}
+
+.mr-spinner {
+    width: 28px;
+    height: 28px;
+    border: 3px solid rgba(232, 84, 10, .15);
+    border-top-color: #e8540a;
+    border-radius: 50%;
+    animation: mrSpin .8s linear infinite;
+    margin: 0 auto 12px;
+}
+
+@keyframes mrSpin {
+    to {
+        transform: rotate(360deg);
+    }
+}

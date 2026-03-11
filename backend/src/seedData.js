@@ -11,6 +11,7 @@
 
 require("dotenv").config();
 const mongoose = require("mongoose");
+const bcrypt = require("bcryptjs");
 
 // ─── Import Models ────────────────────────────────────────────────────────────
 const User = require("./models/User");
@@ -36,7 +37,7 @@ const usersData = [
     {
         _id: id("665a1b2c3d4e5f6a7b8c9d01"),
         username: "admin01",
-        password: "$2a$10$xJ5Kz8mN3vQ9wR7tY1uXeO.abcdefghijklmnopqrstuvwxyz12",
+        password: "123456",
         email: "admin01@university.edu.vn",
         phone: "0901234567",
         role: "admin",
@@ -49,7 +50,7 @@ const usersData = [
     {
         _id: id("665a1b2c3d4e5f6a7b8c9d02"),
         username: "manager01",
-        password: "$2a$10$xJ5Kz8mN3vQ9wR7tY1uXeO.abcdefghijklmnopqrstuvwxyz12",
+        password: "123456",
         email: "manager01@university.edu.vn",
         phone: "0912345678",
         role: "manager",
@@ -62,7 +63,7 @@ const usersData = [
     {
         _id: id("665a1b2c3d4e5f6a7b8c9d03"),
         username: "manager02",
-        password: "$2a$10$xJ5Kz8mN3vQ9wR7tY1uXeO.abcdefghijklmnopqrstuvwxyz12",
+        password: "123456",
         email: "manager02@university.edu.vn",
         phone: "0912345679",
         role: "manager",
@@ -75,7 +76,7 @@ const usersData = [
     {
         _id: id("665a1b2c3d4e5f6a7b8c9d04"),
         username: "sv001",
-        password: "$2a$10$xJ5Kz8mN3vQ9wR7tY1uXeO.abcdefghijklmnopqrstuvwxyz12",
+        password: "123456",
         email: "nguyenvana@student.university.edu.vn",
         phone: "0923456789",
         role: "student",
@@ -88,7 +89,7 @@ const usersData = [
     {
         _id: id("665a1b2c3d4e5f6a7b8c9d05"),
         username: "sv002",
-        password: "$2a$10$xJ5Kz8mN3vQ9wR7tY1uXeO.abcdefghijklmnopqrstuvwxyz12",
+        password: "123456",
         email: "tranthib@student.university.edu.vn",
         phone: "0934567890",
         role: "student",
@@ -101,7 +102,7 @@ const usersData = [
     {
         _id: id("665a1b2c3d4e5f6a7b8c9d06"),
         username: "sv003",
-        password: "$2a$10$xJ5Kz8mN3vQ9wR7tY1uXeO.abcdefghijklmnopqrstuvwxyz12",
+        password: "123456",
         email: "levanc@student.university.edu.vn",
         phone: "0945678901",
         role: "student",
@@ -114,7 +115,7 @@ const usersData = [
     {
         _id: id("665a1b2c3d4e5f6a7b8c9d07"),
         username: "sv004",
-        password: "$2a$10$xJ5Kz8mN3vQ9wR7tY1uXeO.abcdefghijklmnopqrstuvwxyz12",
+        password: "123456",
         email: "phamthid@student.university.edu.vn",
         phone: "0956789012",
         role: "student",
@@ -127,7 +128,7 @@ const usersData = [
     {
         _id: id("665a1b2c3d4e5f6a7b8c9d08"),
         username: "sv005",
-        password: "$2a$10$xJ5Kz8mN3vQ9wR7tY1uXeO.abcdefghijklmnopqrstuvwxyz12",
+        password: "123456",
         email: "hoangvane@student.university.edu.vn",
         phone: "0967890123",
         role: "student",
@@ -605,7 +606,14 @@ async function seed() {
         console.log("✅ Xoa xong!\n");
 
         console.log("📥 Dang chen du lieu...");
-        await User.insertMany(usersData); console.log("   ✔ Users: 8");
+
+        // Hash password cho tất cả users trước khi insert
+        const salt = await bcrypt.genSalt(10);
+        const hashedUsersData = await Promise.all(
+            usersData.map(async (u) => ({ ...u, password: await bcrypt.hash(u.password, salt) }))
+        );
+
+        await User.insertMany(hashedUsersData); console.log("   ✔ Users: 8");
         await Building.insertMany(buildingsData); console.log("   ✔ Buildings: 2");
         await Room.insertMany(roomsData); console.log("   ✔ Rooms: 6");
         await Student.insertMany(studentsData); console.log("   ✔ Students: 5");
@@ -621,11 +629,11 @@ async function seed() {
         await ElectricityUsage.insertMany(electricityUsageData); console.log("   ✔ ElectricityUsage: 3");
 
         console.log("\n🎉 Seed du lieu hoan tat!");
-        console.log("\n📋 Tai khoan mau (password: chua hash - can dung dung password hash o tren):");
-        console.log("   Admin   : admin01 / admin01@university.edu.vn");
-        console.log("   Manager1: manager01 / manager01@university.edu.vn");
-        console.log("   Manager2: manager02 / manager02@university.edu.vn");
-        console.log("   Student1: sv001 / nguyenvana@student.university.edu.vn");
+        console.log("\n📋 Tai khoan mau (password: 123456 cho tat ca):");
+        console.log("   Admin   : admin01 / 123456");
+        console.log("   Manager1: manager01 / 123456");
+        console.log("   Manager2: manager02 / 123456");
+        console.log("   Student1: sv001 / 123456");
 
     } catch (err) {
         console.error("❌ Loi:", err.message);

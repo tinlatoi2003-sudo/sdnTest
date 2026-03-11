@@ -1,0 +1,81 @@
+/* ── Stat cards ── */
+.ad-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 14px;
+    margin-bottom: 8px;
+}
+
+.ad-stat-card {
+    background: #fff;
+    border: 1px solid #efefef;
+    border-radius: 16px;
+    padding: 18px 20px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    transition: box-shadow .2s, border-color .2s;
+}
+
+.ad-stat-card:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, .06);
+    border-color: rgba(232, 84, 10, .15);
+}
+
+.ad-stat-icon {
+    width: 46px;
+    height: 46px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    flex-shrink: 0;
+}
+
+.ad-stat-num {
+    font-size: 26px;
+    font-weight: 800;
+    line-height: 1;
+}
+
+/* ── Quick links grid ── */
+.ad-quick-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 12px;
+}
+
+.ad-quick-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 22px 16px;
+    background: #fff;
+    border: 1.5px solid #efefef;
+    border-radius: 14px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    color: #1a1a1a;
+    font-family: "Inter", sans-serif;
+    transition: all .2s;
+}
+
+.ad-quick-link:hover {
+    border-color: rgba(232, 84, 10, .3);
+    background: #fef9f7;
+    color: #e8540a;
+    box-shadow: 0 4px 16px rgba(232, 84, 10, .1);
+    transform: translateY(-2px);
+}
+
+/* ── Notification CTA ── */
+.ad-notify-cta {
+    background: #fff;
+    border: 1px solid #efefef;
+    border-radius: 16px;
+    padding: 48px 32px;
+    text-align: center;
+}

@@ -1,0 +1,507 @@
+/* ─── Landing Page — FPT Dormitory ─── */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+
+.lp-root {
+    font-family: "Inter", "Segoe UI", Arial, sans-serif;
+    background: #fff;
+    color: #222;
+}
+
+/* ══════════════════════════════════════
+   HERO  (Quick-links + Carousel)
+══════════════════════════════════════ */
+.lp-hero {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 24px 24px 0;
+}
+
+/* ── Quick-link cards ── */
+.lp-quicklinks {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.lp-ql-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    background: #e8540a;
+    color: #fff;
+    border-radius: 10px;
+    padding: 18px 22px;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.15s;
+}
+
+.lp-ql-card:hover {
+    background: #c94000;
+    transform: translateY(-2px);
+}
+
+.lp-ql-icon {
+    font-size: 24px;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.lp-ql-title {
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 4px;
+}
+
+.lp-ql-sub {
+    font-size: 12px;
+    opacity: 0.85;
+    font-weight: 500;
+}
+
+/* ── Carousel ── */
+.lp-carousel {
+    position: relative;
+    width: 100%;
+    height: 460px;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.13);
+}
+
+.lp-slide {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 0.7s ease;
+}
+
+.lp-slide.active {
+    opacity: 1;
+}
+
+.lp-slide-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right,
+            rgba(0, 0, 0, 0.52) 0%,
+            rgba(0, 0, 0, 0.18) 60%,
+            rgba(0, 0, 0, 0) 100%);
+}
+
+.lp-slide-text {
+    position: absolute;
+    bottom: 52px;
+    left: 44px;
+    color: #fff;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+    z-index: 2;
+}
+
+.lp-slide-title {
+    font-size: 36px;
+    font-weight: 800;
+    margin: 0 0 8px 0;
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+}
+
+.lp-slide-subtitle {
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0;
+    opacity: 0.92;
+}
+
+/* Arrow buttons */
+.lp-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    background: rgba(255, 255, 255, 0.18);
+    color: #fff;
+    border: none;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    font-size: 28px;
+    line-height: 1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(4px);
+    transition: background 0.2s;
+}
+
+.lp-arrow:hover {
+    background: rgba(232, 84, 10, 0.75);
+}
+
+.lp-arrow-prev {
+    left: 16px;
+}
+
+.lp-arrow-next {
+    right: 16px;
+}
+
+/* Dots */
+.lp-dots {
+    position: absolute;
+    bottom: 18px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    z-index: 10;
+}
+
+.lp-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(255, 255, 255, 0.45);
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+    padding: 0;
+}
+
+.lp-dot.active {
+    background: #e8540a;
+    transform: scale(1.3);
+}
+
+/* ══════════════════════════════════════
+   SECTION TITLE
+══════════════════════════════════════ */
+.lp-section-title {
+    max-width: 1200px;
+    margin: 56px auto 0;
+    padding: 0 24px;
+    text-align: center;
+}
+
+.lp-section-title h2 {
+    font-size: 28px;
+    font-weight: 800;
+    color: #e8540a;
+    margin: 0 0 12px;
+}
+
+.lp-divider {
+    width: 64px;
+    height: 3px;
+    background: #e8540a;
+    margin: 0 auto 18px;
+    border-radius: 3px;
+}
+
+.lp-section-lead {
+    font-size: 16px;
+    color: #444;
+    font-weight: 500;
+    margin: 0;
+}
+
+.lp-link-pdf {
+    color: #e8540a;
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+/* ══════════════════════════════════════
+   CONTENT BLOCKS
+══════════════════════════════════════ */
+.lp-content-block {
+    max-width: 1200px;
+    margin: 48px auto;
+    padding: 0 24px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+}
+
+.lp-block-text p {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #444;
+    margin: 0 0 14px 0;
+}
+
+.lp-block-img img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 6px 28px rgba(0, 0, 0, 0.1);
+    display: block;
+    object-fit: cover;
+}
+
+.lp-text-right {
+    text-align: left;
+}
+
+.lp-highlight {
+    color: #e8540a;
+    font-weight: 700;
+}
+
+.lp-highlight-lead {
+    font-size: 15px;
+    font-weight: 700;
+    color: #e8540a;
+    line-height: 1.5;
+    margin-bottom: 14px !important;
+    font-style: italic;
+}
+
+/* ── Text-only section (between content blocks) ── */
+.lp-text-section {
+    max-width: 1200px;
+    margin: 0 auto 48px;
+    padding: 0 24px;
+}
+
+.lp-text-section-lead {
+    font-size: 15px;
+    font-weight: 700;
+    color: #e8540a;
+    font-style: italic;
+    margin: 0 0 12px 0;
+    line-height: 1.6;
+}
+
+.lp-text-section p {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #444;
+    margin: 0;
+    text-indent: 2em;
+}
+
+/* ── Full-width image ── */
+.lp-full-img {
+    max-width: 1200px;
+    margin: 0 auto 56px;
+    padding: 0 24px;
+}
+
+.lp-full-img img {
+    width: 100%;
+    border-radius: 14px;
+    box-shadow: 0 6px 28px rgba(0, 0, 0, 0.1);
+    display: block;
+    object-fit: cover;
+    max-height: 380px;
+}
+
+/* ══════════════════════════════════════
+   FAQ
+══════════════════════════════════════ */
+.lp-faq {
+    max-width: 1200px;
+    margin: 0 auto 56px;
+    padding: 0 24px;
+}
+
+.lp-faq-inner {
+    max-width: 860px;
+    margin: 0 auto;
+}
+
+.lp-faq-title {
+    font-size: 28px;
+    font-weight: 800;
+    color: #e8540a;
+    text-align: center;
+    margin: 0 0 12px;
+    letter-spacing: 2px;
+}
+
+.lp-faq-divider {
+    width: 64px;
+    height: 3px;
+    background: #e8540a;
+    margin: 0 auto 32px;
+    border-radius: 3px;
+}
+
+.lp-faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.lp-faq-item {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.lp-faq-question {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    background: #e8540a;
+    color: #fff;
+    border: none;
+    padding: 16px 20px;
+    font-size: 15px;
+    font-weight: 700;
+    font-family: inherit;
+    cursor: pointer;
+    text-align: left;
+    transition: background 0.2s;
+}
+
+.lp-faq-question:hover {
+    background: #c94000;
+}
+
+.lp-faq-chevron {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    transition: transform 0.25s ease;
+}
+
+.lp-faq-item.open .lp-faq-chevron {
+    transform: rotate(180deg);
+}
+
+.lp-faq-answer {
+    background: #fff;
+    border: 1px solid #f0e0d8;
+    border-top: none;
+    padding: 18px 24px;
+    font-size: 14px;
+    line-height: 1.8;
+    color: #444;
+}
+
+.lp-faq-answer p {
+    margin: 0 0 10px;
+}
+
+.lp-faq-answer p:last-child {
+    margin-bottom: 0;
+}
+
+.lp-faq-answer ul,
+.lp-faq-answer ol {
+    margin: 0 0 10px 20px;
+    padding: 0;
+}
+
+.lp-faq-answer li {
+    margin-bottom: 4px;
+}
+
+.lp-faq-answer strong {
+    color: #e8540a;
+}
+
+/* ══════════════════════════════════════
+   CTA
+══════════════════════════════════════ */
+.lp-cta {
+    background: linear-gradient(135deg, #e8540a 0%, #ff7c3a 100%);
+    padding: 64px 24px;
+}
+
+.lp-cta-inner {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    color: #fff;
+}
+
+.lp-cta-inner h2 {
+    font-size: 30px;
+    font-weight: 800;
+    margin: 0 0 12px;
+}
+
+.lp-cta-inner p {
+    font-size: 16px;
+    opacity: 0.9;
+    margin: 0 0 28px;
+}
+
+.lp-cta-btn {
+    display: inline-block;
+    padding: 14px 38px;
+    background: #fff;
+    color: #e8540a;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    transition: transform 0.18s, box-shadow 0.18s;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.lp-cta-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.22);
+}
+
+/* ══════════════════════════════════════
+   RESPONSIVE
+══════════════════════════════════════ */
+@media (max-width: 900px) {
+    .lp-carousel {
+        height: 320px;
+    }
+
+    .lp-slide-title {
+        font-size: 26px;
+    }
+
+    .lp-slide-text {
+        left: 24px;
+        bottom: 40px;
+    }
+
+    .lp-content-block {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .lp-block-left-img .lp-block-img {
+        order: -1;
+    }
+}
+
+@media (max-width: 640px) {
+    .lp-quicklinks {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .lp-carousel {
+        height: 240px;
+    }
+
+    .lp-slide-title {
+        font-size: 20px;
+    }
+
+    .lp-section-title h2 {
+        font-size: 22px;
+    }
+
+    .lp-cta-inner h2 {
+        font-size: 22px;
+    }
+}

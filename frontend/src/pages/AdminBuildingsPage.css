@@ -1,0 +1,558 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+
+.ab-page {
+    min-height: 100vh;
+    background: #f8f9fb;
+    font-family: "Inter", sans-serif;
+    padding: 32px;
+}
+
+.ab-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 28px;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.ab-title {
+    font-size: 22px;
+    font-weight: 800;
+    color: #1a1a1a;
+    margin-bottom: 4px;
+}
+
+.ab-subtitle {
+    font-size: 14px;
+    color: #888;
+}
+
+.ab-btn-create {
+    padding: 11px 22px;
+    background: linear-gradient(135deg, #e8540a, #ff7c3a);
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: "Inter", sans-serif;
+    cursor: pointer;
+    box-shadow: 0 4px 14px rgba(232, 84, 10, .3);
+    transition: transform .18s, box-shadow .18s;
+}
+
+.ab-btn-create:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(232, 84, 10, .4);
+}
+
+/* Alert */
+.ab-alert {
+    padding: 12px 16px;
+    border-radius: 10px;
+    font-size: 13.5px;
+    margin-bottom: 18px;
+}
+
+.ab-alert.success {
+    background: rgba(34, 197, 94, .08);
+    border: 1px solid rgba(34, 197, 94, .2);
+    color: #16a34a;
+}
+
+.ab-alert.error {
+    background: rgba(239, 68, 68, .08);
+    border: 1px solid rgba(239, 68, 68, .2);
+    color: #dc2626;
+}
+
+/* Stats */
+.ab-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 14px;
+    margin-bottom: 28px;
+}
+
+.ab-stat {
+    background: #fff;
+    border: 1px solid #efefef;
+    border-radius: 14px;
+    padding: 18px 20px;
+    text-align: center;
+}
+
+.ab-stat-num {
+    font-size: 28px;
+    font-weight: 800;
+    color: #e8540a;
+}
+
+.ab-stat-label {
+    font-size: 12px;
+    color: #888;
+    margin-top: 3px;
+}
+
+/* Building card */
+.ab-building-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.ab-building-card {
+    background: #fff;
+    border: 1.5px solid #efefef;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: box-shadow .2s, border-color .2s;
+}
+
+.ab-building-card.expanded {
+    border-color: rgba(232, 84, 10, .3);
+    box-shadow: 0 4px 20px rgba(232, 84, 10, .08);
+}
+
+.ab-building-header {
+    display: flex;
+    align-items: center;
+    padding: 18px 22px;
+    cursor: pointer;
+    gap: 14px;
+    transition: background .15s;
+}
+
+.ab-building-header:hover {
+    background: #fef9f7;
+}
+
+.ab-building-icon {
+    width: 46px;
+    height: 46px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #e8540a, #ff7c3a);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    flex-shrink: 0;
+}
+
+.ab-building-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.ab-building-name {
+    font-size: 16px;
+    font-weight: 800;
+    color: #1a1a1a;
+}
+
+.ab-building-meta {
+    font-size: 13px;
+    color: #888;
+    margin-top: 2px;
+}
+
+.ab-building-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.ab-status-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.ab-status-badge.active {
+    background: rgba(34, 197, 94, .1);
+    color: #16a34a;
+    border: 1px solid rgba(34, 197, 94, .25);
+}
+
+.ab-status-badge.inactive {
+    background: rgba(156, 163, 175, .1);
+    color: #6b7280;
+    border: 1px solid rgba(156, 163, 175, .25);
+}
+
+.ab-status-badge.maintenance {
+    background: rgba(245, 158, 11, .1);
+    color: #d97706;
+    border: 1px solid rgba(245, 158, 11, .25);
+}
+
+.ab-chevron {
+    font-size: 18px;
+    color: #bbb;
+    transition: transform .25s;
+}
+
+.ab-chevron.open {
+    transform: rotate(180deg);
+    color: #e8540a;
+}
+
+.ab-btn-edit {
+    padding: 6px 14px;
+    border: 1.5px solid #e8e8e8;
+    border-radius: 8px;
+    background: #fff;
+    color: #555;
+    font-size: 12px;
+    font-family: "Inter", sans-serif;
+    cursor: pointer;
+    transition: all .2s;
+}
+
+.ab-btn-edit:hover {
+    border-color: #e8540a;
+    color: #e8540a;
+}
+
+.ab-btn-del {
+    padding: 6px 12px;
+    border: 1.5px solid rgba(239, 68, 68, .25);
+    border-radius: 8px;
+    background: rgba(239, 68, 68, .06);
+    color: #dc2626;
+    font-size: 12px;
+    font-family: "Inter", sans-serif;
+    cursor: pointer;
+    transition: all .2s;
+}
+
+.ab-btn-del:hover {
+    background: rgba(239, 68, 68, .15);
+}
+
+/* Rooms section */
+.ab-rooms-section {
+    padding: 0 22px 20px;
+    border-top: 1px solid #f5f5f5;
+    animation: fadeIn .2s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-6px);
+    }
+
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+.ab-rooms-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 0 12px;
+}
+
+.ab-rooms-title {
+    font-size: 13px;
+    font-weight: 700;
+    color: #555;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+}
+
+.ab-btn-add-room {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 7px 14px;
+    background: rgba(232, 84, 10, .08);
+    color: #e8540a;
+    border: 1.5px solid rgba(232, 84, 10, .2);
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    font-family: "Inter", sans-serif;
+    cursor: pointer;
+    transition: all .2s;
+}
+
+.ab-btn-add-room:hover {
+    background: rgba(232, 84, 10, .15);
+}
+
+/* Rooms grid */
+.ab-rooms-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+.ab-room-card {
+    border: 1.5px solid #efefef;
+    border-radius: 12px;
+    padding: 14px 16px;
+    background: #fafafa;
+    transition: all .2s;
+}
+
+.ab-room-card:hover {
+    border-color: rgba(232, 84, 10, .2);
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, .05);
+}
+
+.ab-room-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 6px;
+}
+
+.ab-room-num {
+    font-size: 16px;
+    font-weight: 800;
+    color: #1a1a1a;
+}
+
+.ab-room-status {
+    font-size: 10px;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 10px;
+}
+
+.ab-room-status.available {
+    background: rgba(34, 197, 94, .1);
+    color: #16a34a;
+}
+
+.ab-room-status.partial {
+    background: rgba(245, 158, 11, .1);
+    color: #d97706;
+}
+
+.ab-room-status.full {
+    background: rgba(239, 68, 68, .1);
+    color: #dc2626;
+}
+
+.ab-room-status.maintenance {
+    background: rgba(156, 163, 175, .1);
+    color: #6b7280;
+}
+
+.ab-room-info {
+    font-size: 12px;
+    color: #888;
+    margin-bottom: 8px;
+}
+
+.ab-room-occupancy {
+    height: 4px;
+    background: #f0f0f0;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 6px;
+}
+
+.ab-room-occ-bar {
+    height: 100%;
+    border-radius: 4px;
+    transition: width .3s;
+}
+
+.ab-room-price {
+    font-size: 13px;
+    font-weight: 700;
+    color: #e8540a;
+}
+
+.ab-room-actions {
+    display: flex;
+    gap: 6px;
+    margin-top: 8px;
+}
+
+.ab-btn-room-del {
+    flex: 1;
+    padding: 5px;
+    border: 1px solid rgba(239, 68, 68, .2);
+    border-radius: 6px;
+    background: rgba(239, 68, 68, .06);
+    color: #dc2626;
+    font-size: 11px;
+    font-family: "Inter", sans-serif;
+    cursor: pointer;
+    transition: all .2s;
+}
+
+.ab-btn-room-del:hover {
+    background: rgba(239, 68, 68, .14);
+}
+
+/* Empty rooms */
+.ab-rooms-empty {
+    text-align: center;
+    padding: 24px;
+    color: #ccc;
+    font-size: 13px;
+}
+
+/* Loading */
+.ab-rooms-loading {
+    text-align: center;
+    padding: 20px;
+    color: #bbb;
+    font-size: 13px;
+}
+
+.ab-spinner {
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgba(232, 84, 10, .15);
+    border-top-color: #e8540a;
+    border-radius: 50%;
+    animation: abSpin .7s linear infinite;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+@keyframes abSpin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Modal */
+.ab-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, .45);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(2px);
+}
+
+.ab-modal {
+    background: #fff;
+    border-radius: 18px;
+    width: min(520px, 95vw);
+    padding: 30px;
+    box-shadow: 0 24px 64px rgba(0, 0, 0, .18);
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.ab-modal-title {
+    font-size: 18px;
+    font-weight: 800;
+    color: #1a1a1a;
+    margin-bottom: 20px;
+}
+
+.ab-modal-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+
+.ab-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.ab-field.full {
+    grid-column: 1 / -1;
+}
+
+.ab-label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #555;
+}
+
+.ab-input,
+.ab-select,
+.ab-textarea {
+    border: 1.5px solid #e8e8e8;
+    border-radius: 10px;
+    padding: 10px 13px;
+    font-size: 14px;
+    font-family: "Inter", sans-serif;
+    outline: none;
+    color: #1a1a1a;
+    background: #fafafa;
+    transition: border-color .2s, background .2s;
+}
+
+.ab-input:focus,
+.ab-select:focus,
+.ab-textarea:focus {
+    border-color: #e8540a;
+    background: #fff;
+}
+
+.ab-textarea {
+    resize: vertical;
+    min-height: 72px;
+}
+
+.ab-modal-actions {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.ab-btn-cancel {
+    padding: 10px 20px;
+    background: #f5f5f5;
+    color: #555;
+    border: 1.5px solid #e8e8e8;
+    border-radius: 10px;
+    font-size: 14px;
+    font-family: "Inter", sans-serif;
+    cursor: pointer;
+}
+
+.ab-btn-confirm {
+    padding: 10px 22px;
+    background: linear-gradient(135deg, #e8540a, #ff7c3a);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: "Inter", sans-serif;
+    cursor: pointer;
+    box-shadow: 0 4px 14px rgba(232, 84, 10, .3);
+}
+
+.ab-btn-confirm:disabled {
+    opacity: .55;
+    cursor: not-allowed;
+}
+
+.ab-empty-page {
+    text-align: center;
+    padding: 80px 20px;
+    color: #bbb;
+}
+
+.ab-empty-page .ab-empty-icon {
+    font-size: 56px;
+    display: block;
+    margin-bottom: 14px;
+    opacity: .4;
+}

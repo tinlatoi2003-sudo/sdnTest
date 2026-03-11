@@ -1,0 +1,347 @@
+/* ─── Site Header — FPT Dormitory style ─── */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #ffffff;
+    border-bottom: 2px solid #e5e5e5;
+    font-family: "Inter", "Segoe UI", Arial, sans-serif;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+}
+
+.site-header-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 32px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+/* ── Logo ── */
+.header-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    flex-shrink: 0;
+}
+
+.header-logo-icon {
+    display: flex;
+    align-items: center;
+    transition: transform 0.2s ease;
+}
+
+.header-logo:hover .header-logo-icon {
+    transform: scale(1.08) rotate(-3deg);
+}
+
+.header-logo-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.15;
+}
+
+.header-logo-main {
+    font-size: 14px;
+    font-weight: 700;
+    color: #1a1a2e;
+    letter-spacing: 0.01em;
+}
+
+.header-logo-sub {
+    font-size: 11px;
+    font-weight: 500;
+    color: #e8540a;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+/* ── Desktop nav ── */
+.header-nav {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    flex: 1;
+}
+
+.header-nav-link {
+    position: relative;
+    padding: 6px 14px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #555;
+    text-decoration: none;
+    transition: background 0.18s, color 0.18s;
+    white-space: nowrap;
+}
+
+.header-nav-link::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 12px;
+    right: 12px;
+    height: 2px;
+    background: #e8540a;
+    border-radius: 2px;
+    transform: scaleX(0);
+    transition: transform 0.2s ease;
+}
+
+.header-nav-link:hover {
+    background: #fff5f0;
+    color: #e8540a;
+}
+
+.header-nav-link.active {
+    color: #e8540a;
+    background: #fff5f0;
+    font-weight: 600;
+}
+
+.header-nav-link.active::after {
+    transform: scaleX(1);
+}
+
+/* ── Right actions ── */
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-left: auto;
+}
+
+/* User info */
+.header-user {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    flex-shrink: 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+.header-user-info {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.25;
+}
+
+.header-user-name {
+    font-size: 13px;
+    font-weight: 600;
+    color: #1a1a2e;
+    max-width: 120px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.header-role-badge {
+    font-size: 10px;
+    font-weight: 600;
+    padding: 1px 7px;
+    border-radius: 20px;
+    letter-spacing: 0.04em;
+    margin-top: 2px;
+    display: inline-block;
+}
+
+/* Logout button */
+.header-logout-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 7px 14px;
+    border-radius: 8px;
+    border: 1.5px solid #e5e5e5;
+    background: #fff;
+    color: #555;
+    font-size: 13px;
+    font-weight: 500;
+    font-family: inherit;
+    cursor: pointer;
+    transition: border-color 0.18s, background 0.18s, color 0.18s;
+    white-space: nowrap;
+}
+
+.header-logout-btn:hover {
+    border-color: #e8540a;
+    background: #fff5f0;
+    color: #e8540a;
+}
+
+/* Login button */
+.header-login-btn {
+    padding: 8px 20px;
+    border-radius: 8px;
+    background: #e8540a;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.18s, transform 0.15s;
+    display: inline-block;
+}
+
+.header-login-btn:hover {
+    background: #c94000;
+    transform: translateY(-1px);
+}
+
+/* ── Hamburger ── */
+.header-hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 36px;
+    height: 36px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    border-radius: 8px;
+    transition: background 0.15s;
+}
+
+.header-hamburger:hover {
+    background: #f3f3f3;
+}
+
+.header-hamburger span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: #555;
+    border-radius: 2px;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+    transform-origin: center;
+}
+
+.header-hamburger.open span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.header-hamburger.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.header-hamburger.open span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ── Mobile dropdown ── */
+.header-mobile-menu {
+    display: none;
+    flex-direction: column;
+    border-top: 1px solid #e5e5e5;
+    padding: 8px 0;
+    animation: slideDown 0.2s ease;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.header-mobile-link {
+    padding: 12px 24px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #444;
+    text-decoration: none;
+    transition: background 0.15s, color 0.15s;
+}
+
+.header-mobile-link:hover,
+.header-mobile-link.active {
+    background: #fff5f0;
+    color: #e8540a;
+}
+
+.header-mobile-logout {
+    margin: 8px 16px 4px;
+    padding: 10px 16px;
+    border-radius: 8px;
+    border: 1.5px solid #e5e5e5;
+    background: #fff;
+    color: #555;
+    font-size: 13px;
+    font-weight: 500;
+    font-family: inherit;
+    cursor: pointer;
+    text-align: left;
+    transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+
+.header-mobile-logout:hover {
+    background: #fff5f0;
+    color: #e8540a;
+    border-color: #e8540a;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+    .site-header-inner {
+        padding: 0 16px;
+        gap: 12px;
+    }
+
+    .header-nav {
+        display: none;
+    }
+
+    .header-hamburger {
+        display: flex;
+    }
+
+    .header-mobile-menu {
+        display: flex;
+    }
+
+    .header-user-info {
+        display: none;
+    }
+
+    .header-logout-btn span {
+        display: none;
+    }
+
+    .header-logout-btn {
+        padding: 7px 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-avatar {
+        width: 32px;
+        height: 32px;
+        font-size: 12px;
+    }
+}
