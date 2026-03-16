@@ -1,0 +1,56 @@
+/* ── Fixed floating button (bottom-right) ── */
+.logout-btn-fixed {
+    position: fixed;
+    bottom: 28px;
+    right: 28px;
+    z-index: 900;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 20px;
+    background: rgba(15, 15, 30, 0.85);
+    border: 1px solid rgba(239, 68, 68, 0.3);
+    border-radius: 50px;
+    color: #fca5a5;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: "Inter", sans-serif;
+    cursor: pointer;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    transition: background 0.2s, border-color 0.2s, transform 0.15s, box-shadow 0.2s;
+}
+
+.logout-btn-fixed:hover {
+    background: rgba(239, 68, 68, 0.18);
+    border-color: rgba(239, 68, 68, 0.6);
+    color: #ef4444;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(239, 68, 68, 0.2);
+}
+
+.logout-icon {
+    font-size: 16px;
+}
+
+.logout-label {
+    letter-spacing: 0.2px;
+}
+
+/* ── Inline button ── */
+.logout-btn-inline {
+    background: rgba(239, 68, 68, 0.12);
+    border: 1px solid rgba(239, 68, 68, 0.25);
+    border-radius: 10px;
+    color: #fca5a5;
+    font-size: 13.5px;
+    font-family: "Inter", sans-serif;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+
+.logout-btn-inline:hover {
+    background: rgba(239, 68, 68, 0.25);
+    color: #ef4444;
+}

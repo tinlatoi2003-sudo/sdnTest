@@ -1,0 +1,454 @@
+/* ─── Auth Pages — White & Orange Theme ─── */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.auth-back-btn {
+    position: absolute;
+    top: 20px;
+    left: 24px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 13px 26px;
+    /* tăng từ 9px 18px */
+    background: linear-gradient(135deg, #e8540a, #ff7c3a);
+    color: #fff;
+    font-size: 15px;
+    /* tăng từ 13px */
+    font-weight: 600;
+    font-family: "Inter", sans-serif;
+    text-decoration: none;
+    border-radius: 12px;
+    /* tăng nhẹ cho cân đối */
+    box-shadow: 0 4px 16px rgba(232, 84, 10, 0.3);
+    transition: all 0.2s;
+    z-index: 10;
+}
+
+.auth-back-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(232, 84, 10, 0.45);
+    color: #fff;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* ── Wrapper ── */
+.auth-bg {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    background: linear-gradient(135deg, #fff5f0 0%, #ffe8dc 40%, #fff 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.auth-bg::before,
+.auth-bg::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    animation: blobPulse 8s ease-in-out infinite alternate;
+}
+
+.auth-bg::before {
+    width: 520px;
+    height: 520px;
+    background: radial-gradient(circle, rgba(232, 84, 10, 0.12), transparent 70%);
+    top: -160px;
+    right: -160px;
+}
+
+.auth-bg::after {
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(255, 140, 80, 0.10), transparent 70%);
+    bottom: -120px;
+    left: -120px;
+    animation-delay: 2s;
+}
+
+@keyframes blobPulse {
+    from {
+        transform: scale(1) rotate(0deg);
+    }
+
+    to {
+        transform: scale(1.15) rotate(10deg);
+    }
+}
+
+/* ── Card ── */
+.auth-card {
+    width: 100%;
+    max-width: 420px;
+    background: #fff;
+    border: 1px solid rgba(232, 84, 10, 0.12);
+    border-radius: 28px;
+    padding: 44px 40px 36px;
+    box-shadow: 0 8px 48px rgba(232, 84, 10, 0.12), 0 2px 12px rgba(0, 0, 0, 0.06);
+    position: relative;
+    z-index: 1;
+    animation: cardIn 0.45s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes cardIn {
+    from {
+        opacity: 0;
+        transform: translateY(24px) scale(0.97);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* ── Header ── */
+.auth-header {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.auth-icon {
+    font-size: 52px;
+    display: block;
+    margin-bottom: 14px;
+    animation: float 3.5s ease-in-out infinite;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+.auth-title {
+    font-size: 26px;
+    font-weight: 800;
+    color: #1a1a1a;
+    letter-spacing: -0.5px;
+    line-height: 1.2;
+}
+
+.auth-subtitle {
+    font-size: 13.5px;
+    color: #888;
+    margin-top: 6px;
+}
+
+/* ── Form ── */
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.form-label {
+    font-size: 12.5px;
+    font-weight: 600;
+    color: #555;
+    letter-spacing: 0.2px;
+}
+
+.input-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-box .icon {
+    position: absolute;
+    left: 14px;
+    font-size: 16px;
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 13px 14px 13px 42px;
+    background: #fafafa;
+    border: 1.5px solid #e8e8e8;
+    border-radius: 14px;
+    color: #1a1a1a;
+    font-size: 14.5px;
+    font-family: "Inter", sans-serif;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.input-box input::placeholder {
+    color: #bbb;
+}
+
+.input-box input:focus {
+    border-color: #e8540a;
+    box-shadow: 0 0 0 3px rgba(232, 84, 10, 0.12);
+    background: #fff;
+}
+
+.eye-btn {
+    position: absolute;
+    right: 12px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    opacity: 0.45;
+    transition: opacity 0.2s;
+    padding: 4px;
+    line-height: 1;
+}
+
+.eye-btn:hover {
+    opacity: 1;
+}
+
+/* ── Alert ── */
+.auth-alert {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 11px 14px;
+    border-radius: 12px;
+    font-size: 13.5px;
+    animation: shake 0.35s ease;
+}
+
+.auth-alert.error {
+    background: rgba(239, 68, 68, 0.08);
+    border: 1px solid rgba(239, 68, 68, 0.25);
+    color: #dc2626;
+}
+
+.auth-alert.success {
+    background: rgba(34, 197, 94, 0.08);
+    border: 1px solid rgba(34, 197, 94, 0.25);
+    color: #16a34a;
+}
+
+@keyframes shake {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    20% {
+        transform: translateX(-6px);
+    }
+
+    60% {
+        transform: translateX(6px);
+    }
+}
+
+/* ── Buttons ── */
+.btn-primary {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(135deg, #e8540a, #ff7c3a);
+    color: #fff;
+    font-size: 15px;
+    font-weight: 700;
+    font-family: "Inter", sans-serif;
+    border: none;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: transform 0.18s, box-shadow 0.18s;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+}
+
+.btn-primary:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px rgba(232, 84, 10, 0.35);
+}
+
+.btn-primary:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+}
+
+.btn-ghost {
+    width: 100%;
+    padding: 12px;
+    background: transparent;
+    border: 1.5px solid #e8e8e8;
+    border-radius: 14px;
+    color: #888;
+    font-size: 14px;
+    font-family: "Inter", sans-serif;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-ghost:hover {
+    background: #faf5f3;
+    color: #e8540a;
+    border-color: #e8540a;
+}
+
+/* ── Link ── */
+.auth-link {
+    color: #e8540a;
+    font-size: 13.5px;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.auth-link:hover {
+    color: #c94000;
+}
+
+.auth-footer {
+    text-align: center;
+    margin-top: 8px;
+}
+
+/* ── Step Indicator ── */
+.steps {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    margin-bottom: 28px;
+}
+
+.step-dot {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    font-size: 12px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1.5px solid #e8e8e8;
+    color: #bbb;
+    background: #fff;
+    transition: all 0.3s;
+}
+
+.step-dot.active {
+    background: linear-gradient(135deg, #e8540a, #ff7c3a);
+    border-color: transparent;
+    color: #fff;
+    box-shadow: 0 4px 14px rgba(232, 84, 10, 0.35);
+}
+
+.step-bar {
+    width: 40px;
+    height: 1px;
+    background: #e8e8e8;
+}
+
+/* ── Token Box ── */
+.token-box {
+    background: rgba(232, 84, 10, 0.06);
+    border: 1px solid rgba(232, 84, 10, 0.2);
+    border-radius: 14px;
+    padding: 16px;
+    text-align: center;
+}
+
+.token-label {
+    font-size: 12px;
+    color: #888;
+    display: block;
+    margin-bottom: 6px;
+}
+
+.token-code {
+    font-size: 30px;
+    font-weight: 700;
+    color: #e8540a;
+    letter-spacing: 10px;
+    display: block;
+}
+
+.token-expire {
+    font-size: 11px;
+    color: #bbb;
+    display: block;
+    margin-top: 6px;
+}
+
+/* ── Success ── */
+.success-state {
+    text-align: center;
+    padding: 16px 0 8px;
+}
+
+.success-emoji {
+    font-size: 52px;
+    display: block;
+    margin-bottom: 12px;
+    animation: bounceIn 0.5s cubic-bezier(0.36, 0.07, 0.19, 0.97);
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(0);
+    }
+
+    60% {
+        transform: scale(1.12);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.success-state p {
+    color: #555;
+    font-size: 14.5px;
+    margin-bottom: 20px;
+}
+
+/* ── Spinner ── */
+.spinner {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    border-top-color: #fff;
+    border-radius: 50%;
+    animation: spin 0.7s linear infinite;
+    vertical-align: middle;
+    margin-right: 6px;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
